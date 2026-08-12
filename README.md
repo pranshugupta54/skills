@@ -21,6 +21,7 @@ npx skills add pranshugupta54/skills --skill docstring-cleanup
 | Skill | Description |
 | --- | --- |
 | [docstring-cleanup](skills/docstring-cleanup/SKILL.md) | Clean up feature-coupled docstrings and comments after working on a feature or PR. Docstrings must describe code generically, as it exists — never reference the feature, PR, or ticket that introduced them. |
+| [walkthrough-pr](skills/walkthrough-pr/SKILL.md) | Walk through a PR's changes one file at a time, ordered by data flow (entry → transform → persist → output), pausing for confirmation after each file. Skips tests, lockfiles, and generated code. |
 
 ## Why
 
