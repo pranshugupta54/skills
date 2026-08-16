@@ -25,6 +25,7 @@ npx skills add pranshugupta54/skills --skill docstring-cleanup
 ## Reference
 
 - **[docstring-cleanup](./skills/docstring-cleanup/SKILL.md)** — Remove feature-coupled docstrings and comments after a feature or PR. Docs should describe code as if it had always existed — never the feature, ticket, or diff that introduced it. Includes an anti-pattern catalog (change narration, temporal language, reviewer-directed comments) and a scan-classify-rewrite procedure that runs fine on cheap models.
+- **[ci-first-verification](./skills/ci-first-verification/SKILL.md)** — For machines running many agents at once: stop burning local CPU on builds, test suites, and repo-wide lint when the PR's CI already answers the question. Read `gh pr checks` instead; scope any unavoidable local run to a single file. Includes multi-agent etiquette (one heavy process at a time, kill your watchers).
 - **[walkthrough-pr](./skills/walkthrough-pr/SKILL.md)** — Walk through a PR one file at a time, ordered by data flow (entry → transform → persist → output) instead of alphabetically, pausing for confirmation after each file. Skips tests, lockfiles, and generated code; handles renames and huge PRs gracefully.
 
 ## Why
