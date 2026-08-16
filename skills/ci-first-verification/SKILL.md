@@ -24,6 +24,15 @@ gh run view <run-id> --log-failed  # read ONLY the failing steps' logs
 
 Typical loop: push → `gh pr checks` → read failures from logs → fix → push → let CI re-verify. No local build ever ran.
 
+## No PR yet?
+
+If the branch has no PR (`gh pr view` fails), don't silently fall back to heavy local runs — **ask the user** which they prefer:
+
+1. **Create a PR now** (draft is fine: `gh pr create --draft`) so CI takes over verification, or
+2. **Run the checks locally** this once, scoped as narrowly as possible.
+
+Default recommendation to the user: the draft PR — it costs nothing, CI does the work, and every later verification in the session is free. Only skip the question and go local when the repo has no CI configured at all (no `.github/workflows/`), or the user already told you which way to go.
+
 ## Heavy processes — avoid by default
 
 - Full project build (`npm run build`, `cargo build`, `tsc` over the project, bundlers)
